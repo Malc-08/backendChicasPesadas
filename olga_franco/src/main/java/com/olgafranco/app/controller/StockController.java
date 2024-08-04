@@ -38,10 +38,9 @@ public class StockController {
         Optional<Stock> stock = stockService.findById(id);
         if (stock.isPresent()) {
             Stock existingStock = stock.get();
-            existingStock.setFkProductId(stockDetails.getFkProductId());
             existingStock.setStockQuantity(stockDetails.getStockQuantity());
             existingStock.setUpdateDate(stockDetails.getUpdateDate());
-            existingStock.setProductsProductId(stockDetails.getProductsProductId());
+            existingStock.setProduct(stockDetails.getProduct());
             final Stock updatedStock = stockService.save(existingStock);
             return ResponseEntity.ok(updatedStock);
         } else {

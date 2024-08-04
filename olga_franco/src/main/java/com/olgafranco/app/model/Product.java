@@ -1,6 +1,7 @@
 package com.olgafranco.app.model;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -32,6 +33,9 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "fk_category_id", nullable = false)
     private Category category;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Stock> stocks;
 
     // Getters y Setters
     public Long getProductId() {
@@ -96,5 +100,13 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public List<Stock> getStocks() {
+        return stocks;
+    }
+
+    public void setStocks(List<Stock> stocks) {
+        this.stocks = stocks;
     }
 }

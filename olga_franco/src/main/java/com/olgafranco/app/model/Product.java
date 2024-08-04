@@ -36,6 +36,10 @@ public class Product {
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Stock> stocks;
+    
+    @ManyToOne
+    @JoinColumn(name="order_id", nullable = false)
+    private Orders order;
 
     // Getters y Setters
     public Long getProductId() {

@@ -1,6 +1,8 @@
 package com.olgafranco.app.model;
 
 import jakarta.persistence.*;
+
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -16,7 +18,7 @@ public class Product {
     private String productName;
 
     @Column(name = "price", nullable = false, precision = 8, scale = 2)
-    private Double price;
+    private BigDecimal price;
 
     @Column(name = "size", length = 50)
     private String size;
@@ -58,11 +60,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

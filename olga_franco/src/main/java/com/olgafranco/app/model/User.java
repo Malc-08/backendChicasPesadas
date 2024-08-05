@@ -15,15 +15,15 @@ public class User {
 	
 	@Column(name="user_name", length=50, nullable=false)
 	private String user_name;
-	@Column(name="user_lastname", length=500, nullable=true)
+	@Column(name="user_lastname", length=50, nullable=true)
 	private String user_lastname; 
 	@Column(name="email", length=50, nullable=false, unique=true)
 	private String email;
-	@Column(name="password", length=20, nullable=false)
+	@Column(name="password", length=100, nullable=false)
 	private String password;
 	@Column(name="phone", length=15, nullable=false)
 	private String phone;
-	@Column(name="address", length=15, nullable=true)
+	@Column(name="address", length=150, nullable=true)
 	private String address;
 	@Column(name="register_date_time", nullable=false)
 	private LocalDate register_date_time;

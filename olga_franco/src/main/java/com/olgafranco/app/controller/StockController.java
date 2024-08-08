@@ -12,6 +12,7 @@ import com.olgafranco.app.service.StockService;
 
 @RestController
 @RequestMapping("/api/stock")
+@CrossOrigin(origins = "*")
 public class StockController {
 
     @Autowired

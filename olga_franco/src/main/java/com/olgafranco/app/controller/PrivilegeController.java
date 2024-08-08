@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/privileges")
+@RequestMapping("/api/privileges")
+@CrossOrigin(origins = "*")
 public class PrivilegeController {
 
     @Autowired

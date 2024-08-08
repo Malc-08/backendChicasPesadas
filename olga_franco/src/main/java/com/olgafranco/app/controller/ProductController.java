@@ -10,6 +10,7 @@ import com.olgafranco.app.service.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
+@CrossOrigin(origins = "*")
 public class ProductController {
 
     @Autowired

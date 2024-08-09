@@ -1,4 +1,4 @@
-<img src="./img/Logo.png" alt=”Logotipo chicas pesadas" style="width: 100%; height: auto;"></img>
+<img src="./img/Logo.png" alt=”Logotipo chicas pesadas" style="width: 100%; height: auto;"/>
 
 # Olga Franco!
 

@@ -1,6 +1,8 @@
-<img src="./img/Logo.png" alt=”Logotipo chicas pesadas" style="width: 100%; height: auto;"/>
-
 # Olga Franco!
+
+<div style="text-align:center">
+  <img src="./img/Logo.png" alt="cambiar nombre de rama" width="400px">
+</div>
 
 <p><b>Repository for Olga Franco! Project</b></p>
 
@@ -73,4 +75,6 @@ Fonts:
     <li style="color: #C09F9E">#C09F9E - Rosa Apagado</li>
     <li style="color: #AD8D8C">#AD8D8C - Rosa Polvoriento</li>
 </ul>
-<img src="./Img/Paleta de colores.png" alt="Tonos del front-end" style="width: 100%; height: auto;"></img>
+<div style="text-align:center">
+  <img src="./img/Paleta de colores.png" alt="cambiar nombre de rama" width="400px">
+</div>

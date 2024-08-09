@@ -7,6 +7,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";import{a as m}from"./cart-U_400-W4.
                     <div class="carousel-item">
                         <img src="${t.hoverImageUrl}" class="carousel-imageModal" alt="...">
                     </div>
+                    <div class="carousel-item">
+                        <img src="/img/Tablamedidas.jpg" class="carousel-imageModal" alt="Tabla de medidas">
+                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsModal" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -21,9 +24,11 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";import{a as m}from"./cart-U_400-W4.
             <div class="thumbnails-container">
                 <img src="${t.imageUrl}" class="thumbnail-image" data-bs-target="#carouselExampleControlsModal" data-bs-slide-to="0" alt="...">
                 <img src="${t.hoverImageUrl}" class="thumbnail-image" data-bs-target="#carouselExampleControlsModal" data-bs-slide-to="1" alt="...">
+                <img src="/img/Tablamedidas.jpg" class="thumbnail-image" data-bs-target="#carouselExampleControlsModal" data-bs-slide-to="2" alt="Tabla de medidas">
             </div>
         `,n=`
             <div class="product-infoModal">
+                <br>
                 <h2>${t.name}</h2>
                 <p>Precio: $${t.price} MXN</p>
                 <div class="form-group">
@@ -52,12 +57,13 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";import{a as m}from"./cart-U_400-W4.
                     ${n}
                 </div>
             </div>
-        `,new bootstrap.Carousel(document.querySelector("#carouselExampleControlsModal"),{interval:5e3}),e.style.display="block",e.querySelector(".closeModal").addEventListener("click",function(){e.style.display="none"}),l.querySelector("#add-to-cartModal").addEventListener("click",function(){const d=document.getElementById("sizeModal").value,c=parseInt(document.getElementById("unitsModal").value);m(t,d,c),$("#confirmationModal").modal("show"),document.getElementById("sizeModal").value="S",document.getElementById("unitsModal").value="1"})}}document.addEventListener("DOMContentLoaded",function(){document.querySelector("#confirmationModal .btn-secondary").addEventListener("click",function(){$("#confirmationModal").modal("hide")}),document.querySelector("#confirmationModal #goToCartBtn").addEventListener("click",function(){window.location.href="../cart/cart.html"}),$("#confirmationModal").modal({show:!1})});const r=new g;function p(a){const e=`
-       <div class="card" style="width: 20rem;">
+        `,new bootstrap.Carousel(document.querySelector("#carouselExampleControlsModal"),{interval:5e3}),e.style.display="block",document.querySelector("#modalModal .closeModal").addEventListener("click",function(){document.getElementById("modalModal").style.display="none"}),l.querySelector("#add-to-cartModal").addEventListener("click",function(){const d=document.getElementById("sizeModal").value,c=parseInt(document.getElementById("unitsModal").value);m(t,d,c),$("#confirmationModal").modal("show"),document.getElementById("sizeModal").value="S",document.getElementById("unitsModal").value="1"})}}document.addEventListener("DOMContentLoaded",function(){document.querySelector("#confirmationModal .btn-secondary").addEventListener("click",function(){$("#confirmationModal").modal("hide")}),document.querySelector("#confirmationModal #goToCartBtn").addEventListener("click",function(){window.location.href="../cart/cart.html"}),$("#confirmationModal").modal({show:!1})});const r=new g;function p(a){const e=`
+       <div class="card">
     <div class="image-container">
-        <img src="${a.imageUrl}" class="primary-image" alt="product image">
+             <img src="${a.imageUrl}" width="180px" alt="product image" loading="lazy">
+
         <div class="hover-content">
-            <img src="${a.hoverImageUrl}" class="hover-image" alt="hover image">
+            <img src="${a.hoverImageUrl}" width="180px" class="hover-image" alt="hover image">
             <span class="modal-text" data-item='${JSON.stringify(a)}'>Ver más</span>
         </div>
     </div>

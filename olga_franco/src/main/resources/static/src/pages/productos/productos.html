@@ -27,21 +27,21 @@
     <!--  jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <script type="module" crossorigin src="/assets/products-CQEWn2vQ.js"></script>
+  <script type="module" crossorigin src="/assets/products-Bs8fGk9d.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
   <link rel="modulepreload" crossorigin href="/assets/cart-U_400-W4.js">
-  <link rel="stylesheet" crossorigin href="/assets/products-CQronnZB.css">
+  <link rel="stylesheet" crossorigin href="/assets/products-lHu3807x.css">
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/index.html">
                 <img id="logo" src="/assets/logo-olga-franco-lenceria-aQww8rus.png" alt="logo-olga-franco-lenceria"
-                    class="mr-3">
+                    class="mr-3" loading="lazy">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" por
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@
                     <li class="nav-item text-center">
                         </b><a class="nav-link" href="../acercaDeNosotros/acercadenosotros.html">Conóceme</a>
                     </li>
-                    <li class="nav-item text-center active">
+                    <li id="activeProductos" class="nav-item text-center active">
                         <a class="nav-link" href="../productos/productos.html">Productos</a>
                     </li>
                     <li class="nav-item text-center">
@@ -62,9 +62,9 @@
                     </li>
                     <li class="nav-item text-center">
                         <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
+                    </li>
                     <li class="nav-item text-center">
                         <a class="nav-link" href="../cart/cart.html"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
                     </li>
                 </ul>
             </div>
@@ -78,21 +78,21 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/assets/Carousel-productos-1-BO3NBm-G.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/Carousel-productos-1-BO3NBm-G.jpg" class="d-block w-100" alt="..." loading="lazy">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Colección Primavera-Verano</h3>
                     <p>Todo con 10% de descuento</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/assets/Carousel-productos-2-Ct585utq.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/Carousel-productos-2-Ct585utq.jpg" class="d-block w-100" alt="..." loading="lazy">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Colección Primavera-Verano</h3>
                     <p>Todo con 10% de descuento</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/assets/Set-Florentina-Cd04vjGN.jpg" class="d-block w-100" alt="...">
+                <img src="/assets/Set-Florentina-Cd04vjGN.jpg" class="d-block w-100" alt="..." loading="lazy">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Colección Primavera-Verano</h3>
                     <p>Todo con 10% de descuento</p>
@@ -176,7 +176,7 @@
             <div class="row">
                 <div class="col">
                     <div class="policy">
-                        <h5><a href="../acercaDeNosotros/politica.html">Política de privacidad y términos</a></h5>
+                        <h5><a href="../politicas/politica.html">Política de privacidad y términos</a></h5>
                     </div>
                 </div>
             </div>
@@ -184,6 +184,9 @@
     </footer>
 
     <!-- Bootstrap 5.3.3 JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybBogGz7iJ4b8/rRtK/8e2D98K7ttREYXePLAX8BK7uwYBT/4"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -191,10 +194,17 @@
     <!-- Script personalizado para animación -->
 
     <script>
-        // Inicializar todos los modales que contengan la clase modal
-        var modals = document.querySelectorAll('.modal');
+        const modals = document.querySelectorAll('.modal');
         modals.forEach(function (modal) {
             new bootstrap.Modal(modal);
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-close').on('click', function () {
+                $(this).closest('.modal').modal('hide');
+            });
         });
     </script>
 </body>
